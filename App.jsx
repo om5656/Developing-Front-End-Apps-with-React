@@ -1,30 +1,23 @@
-import React from "react";
-import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
-import ProductList from "./components/ProductList";
-import CartItem from "./components/CartItem";
-import AboutUs from "./components/AboutUs";
+import React, { useState } from "react";
+import ProductList from "./ProductList";
 import "./App.css";
 
 function App() {
+  const [showProductList, setShowProductList] = useState(false);
+
   return (
-    <Router>
-      <Routes>
-        <Route
-          path="/"
-          element={
-            <div className="landing">
-              <h1>Nursery Paradise</h1>
-              <Link to="/products">
-                <button>Get Started</button>
-              </Link>
-            </div>
-          }
-        />
-        <Route path="/products" element={<ProductList />} />
-        <Route path="/cart" element={<CartItem />} />
-        <Route path="/about" element={<AboutUs />} />
-      </Routes>
-    </Router>
+    <div>
+      {!showProductList ? (
+        <div className="landing">
+          <h1>Welcome to Paradise Nursery</h1>
+          <button onClick={() => setShowProductList(true)}>
+            Get Started
+          </button>
+        </div>
+      ) : (
+        <ProductList />
+      )}
+    </div>
   );
 }
 
