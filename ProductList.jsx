@@ -10,16 +10,16 @@ export default function ProductList() {
   const categories = {
     "Foliage Plants": [
       { id: 1, name: "Monstera", price: 15, img: "https://via.placeholder.com/100" },
-      { id: 2, name: "Fiddle Leaf Fig", price: 20, img: "https://via.placeholder.com/100" },
+      { id: 2, name: "Fiddle Leaf Fig", price: 20, img: "https://via.placeholder.com/100" }
     ],
     "Succulents": [
       { id: 3, name: "Aloe Vera", price: 8, img: "https://via.placeholder.com/100" },
-      { id: 4, name: "Echeveria", price: 10, img: "https://via.placeholder.com/100" },
+      { id: 4, name: "Echeveria", price: 10, img: "https://via.placeholder.com/100" }
     ],
     "Flowering Plants": [
       { id: 5, name: "Peace Lily", price: 12, img: "https://via.placeholder.com/100" },
-      { id: 6, name: "Orchid", price: 25, img: "https://via.placeholder.com/100" },
-    ],
+      { id: 6, name: "Orchid", price: 25, img: "https://via.placeholder.com/100" }
+    ]
   };
 
   const handleAdd = (product) => {
@@ -30,8 +30,7 @@ export default function ProductList() {
   return (
     <div>
       <nav>
-        <a href="#" onClick={() => window.location.reload()}>Home</a> |{" "}
-        <a href="#">Plants</a> |{" "}
+        <a href="#">Home</a> | <a href="#">Plants</a> | 
         <span>Cart ({cartItems.reduce((acc, i) => acc + i.quantity, 0)})</span>
       </nav>
 

@@ -1,4 +1,4 @@
-.landing {
+.background-image {
   background-image: url("https://images.unsplash.com/photo-1501004318641-b39e6451bec6");
   background-size: cover;
   background-position: center;
@@ -13,12 +13,10 @@
 
 button {
   padding: 10px 20px;
-  background-color: #2c7a7b;
-  color: white;
-  border: none;
-  border-radius: 5px;
+  margin-top: 20px;
   cursor: pointer;
 }
-button:hover {
-  background-color: #285e61;
+
+nav a {
+  margin-right: 10px;
 }
